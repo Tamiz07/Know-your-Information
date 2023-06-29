@@ -22,34 +22,3 @@ function displayDetails() {
 
       document.getElementById('resume').style.display = "block";
     }
-/*var button = document.getElementById("enter");
-var input  = document.getElementById("userinput");
-var ul = document.querySelector("ul");
-
-function inputlength(){
-	return input.value.length;
-}
-
-function addListElement(){
-		var li = document.createElement("li");
-		li.appendChild(document.createTextNode(input.value));
-		ul.appendChild(li);
-		input.value = "";
-}
-
-function addListAfterClick(){
-	if(inputlength() >0){
-		addListElement()
-	}	
-}
-
-function addListAfterKeypress(event) {
-	if(inputlength() > 0 && event.keyCode === 13){
-		addListElement()
-	}
-}
-
-button.addEventListener("click",addListAfterClick);
-
-input.addEventListener("keypress",addListAfterKeypress);
-	*/
