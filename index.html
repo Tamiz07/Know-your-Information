@@ -1,0 +1,77 @@
+<!-- 
+Online HTML, CSS and JavaScript editor to run code online.
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>My details</title>
+</head>
+
+<body>
+  <h1>
+    Hi, Welcome...
+  </h1>
+  <div id="information">
+    First name: <input type="text" id="fname"><br>
+    Last name: <input type="text" id="lname"><br>
+    Email: <input type="email" id="email"><br>
+  
+    <label for="degree">Highest Degree: </label>
+    
+    <select id="degree">
+      <optgroup label="Under Graduate">
+        <option value="Bca">Bca</option>
+        <option value="B.sc">B.sc</option>
+      </optgroup>
+      <optgroup label="Post Graduate">
+        <option value="Mca">Mca</option>
+        <option value="M.sc">M.sc</option>
+      </optgroup>
+    </select><br>
+    
+    University: <input type="text" id="university"><br>
+    <br>
+    <button type="submit" onclick="displayDetails()">Submit</button>
+    <button type="reset">Reset</button>
+  </div>
+
+  <div id="resume" style="display: none;">
+    <h2>Resume Details</h2>
+    <p><strong>First Name:</strong> <span id="display-fname"></span></p>
+    <p><strong>Last Name:</strong> <span id="display-lname"></span></p>
+    <p><strong>Email:</strong> <span id="display-email"></span></p>
+    <p><strong>Degree:</strong> <span id="display-degree"></span></p>
+    <p><strong>University:</strong> <span id="display-university"></span></p>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+
+</html>
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Shopping cart</title>
+</head>
+<body>
+	<h1>Shopping List</h1>
+	<p>Get it done today</p>
+
+	<input id="userinput" type="text" placeholder="Enter items"> <button id="enter">Enter</button>
+	<ul>
+		<li>Notebook</li>
+		<li>Pencil</li>
+		<li>School bag</li>
+		<li>Pen</li>
+	</ul>
+
+	<script type="text/javascript" src="script.js"></script>
+</body>
+</html> -->
