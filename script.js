@@ -1,24 +1,47 @@
-function displayDetails() {
-      var fname = document.getElementById('fname').value;
-      var lname = document.getElementById('lname').value;
-      var email = document.getElementById('email').value;
-  	  var degree = document.getElementById('degree').value;
-  	  var university = document.getElementById('univeristy').value;
-	  
-      alert("First Name: " + fname + "\nLast Name: " + lname + "\nDegree: " + degree + "\nUniversity: " + university);
-      document.getElementById('display-lname').textContent = fname;
-      document.getElementById('display-fname').textContent = lname;
-      document.getElementById('display-email').textContent = email;
-  	  document.getElementById('display-degree').textContent = degree;
-      document.getElementById('display-university').textContent = university;
-  
-  	  
-	
-      fname.value = "";
-      lname.value = "";
-  	  email.value = "";
-      degree.value = "";
-  	  university.value = "";
+const submit = document.querySelector("#submitBtn");
+const reset = document.querySelector("#reset");
+const resume = document.querySelector("#resume");
 
-      document.getElementById('resume').style.display = "block";
-    }
+// Output
+const displayFname = document.querySelector("#display-fname");
+const displayLname = document.querySelector("#display-lname");
+const displayEmail = document.querySelector("#display-email");
+const displayDegree = document.querySelector("#display-degree");
+const displayUniversity = document.querySelector("#display-university");
+
+// Display details of the form
+function displayDetails(){
+  const firstName = document.querySelector("#fname").value;
+  const lastName = document.querySelector("#lname").value;
+  const email = document.querySelector("#email").value;
+  const degree = document.querySelector("#degree").value;
+  const univeristy = document.querySelector("#university").value;
+  
+  if(resume.style.display == "none"){
+    displayFname.textContent = firstName;
+    displayLname.textContent = lastName;
+    displayEmail.textContent = email;
+    displayDegree.textContent = degree;
+    displayUniversity.textContent = univeristy;
+    resume.style.display = "block";
+
+  } else{
+    resume.style.display = "none";
+      }
+}
+
+// Reset details in the form
+function resetDetails(){
+  document.querySelector("#fname").value = "";
+  document.querySelector("#lname").value = "";
+  document.querySelector("#email").value = "";
+  document.querySelector("#degree").value = "";
+  document.querySelector("#university").value = "";
+
+  if(resume.style.display == 'block') {
+    resume.style.display = 'none';
+  }
+}
+
+submit.addEventListener("click", displayDetails);
+reset.addEventListener("click", resetDetails);
