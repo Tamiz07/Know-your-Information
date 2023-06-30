@@ -9,8 +9,8 @@ const displayEmail = document.querySelector("#display-email");
 const displayDegree = document.querySelector("#display-degree");
 const displayUniversity = document.querySelector("#display-university");
 
-
-submit.addEventListener("click", () => {
+// Display details of the form
+function displayDetails(){
   const firstName = document.querySelector("#fname").value;
   const lastName = document.querySelector("#lname").value;
   const email = document.querySelector("#email").value;
@@ -28,9 +28,10 @@ submit.addEventListener("click", () => {
   } else{
     resume.style.display = "none";
       }
-})
+}
 
-reset.addEventListener("click", ()=>{
+// Reset details in the form
+function resetDetails(){
   document.querySelector("#fname").value = "";
   document.querySelector("#lname").value = "";
   document.querySelector("#email").value = "";
@@ -40,4 +41,7 @@ reset.addEventListener("click", ()=>{
   if(resume.style.display == 'block') {
     resume.style.display = 'none';
   }
-})
+}
+
+submit.addEventListener("click", displayDetails);
+reset.addEventListener("click", resetDetails);
