@@ -1,47 +1,52 @@
-const submit = document.querySelector("#submitBtn");
-const reset = document.querySelector("#reset");
-const resume = document.querySelector("#resume");
+<!-- 
+Online HTML, CSS and JavaScript editor to run code online.
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>My details</title>
+  </head>
 
-// Output
-const displayFname = document.querySelector("#display-fname");
-const displayLname = document.querySelector("#display-lname");
-const displayEmail = document.querySelector("#display-email");
-const displayDegree = document.querySelector("#display-degree");
-const displayUniversity = document.querySelector("#display-university");
+  <body>
+    <h1>Hi, Welcome...</h1>
+    <div id="information">
+      <label for="fname">First name:</label>
+      <input type="text" id="fname" /><br />
+      <label for="lname">Last name:</label>
+      <input type="text" id="lname" /><br />
+      <label for="email">Email:</label> <input type="email" id="email" /><br />
 
-// Display details of the form
-function displayDetails(){
-  const firstName = document.querySelector("#fname").value;
-  const lastName = document.querySelector("#lname").value;
-  const email = document.querySelector("#email").value;
-  const degree = document.querySelector("#degree").value;
-  const univeristy = document.querySelector("#university").value;
-  
-  if(resume.style.display == "none"){
-    displayFname.textContent = firstName;
-    displayLname.textContent = lastName;
-    displayEmail.textContent = email;
-    displayDegree.textContent = degree;
-    displayUniversity.textContent = univeristy;
-    resume.style.display = "block";
+      <label for="degree">Highest Degree: </label>
 
-  } else{
-    resume.style.display = "none";
-      }
-}
+      <select id="degree">
+        <optgroup label="Under Graduate">
+          <option value="Bca">Bca</option>
+          <option value="B.sc">B.sc</option>
+        </optgroup>
+        <optgroup label="Post Graduate">
+          <option value="Mca">Mca</option>
+          <option value="M.sc">M.sc</option>
+        </optgroup></select
+      ><br />
 
-// Reset details in the form
-function resetDetails(){
-  document.querySelector("#fname").value = "";
-  document.querySelector("#lname").value = "";
-  document.querySelector("#email").value = "";
-  document.querySelector("#degree").value = "";
-  document.querySelector("#university").value = "";
+      University: <input type="text" id="university" /><br />
+      <br />
+      <button type="submit" id="submitBtn">Submit</button>
+      <button type="reset" id="reset">Reset</button>
+    </div>
 
-  if(resume.style.display == 'block') {
-    resume.style.display = 'none';
-  }
-}
+    <div id="resume" style="display: none">
+      <h2>Resume Details</h2>
+      <p><strong>First Name:</strong> <span id="display-fname"></span></p>
+      <p><strong>Last Name:</strong> <span id="display-lname"></span></p>
+      <p><strong>Email:</strong> <span id="display-email"></span></p>
+      <p><strong>Degree:</strong> <span id="display-degree"></span></p>
+      <p><strong>University:</strong> <span id="display-university"></span></p>
+    </div>
 
-submit.addEventListener("click", displayDetails);
-reset.addEventListener("click", resetDetails);
+    <script src="script.js"></script>
+  </body>
+</html>
